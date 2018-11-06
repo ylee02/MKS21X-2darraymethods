@@ -8,3 +8,13 @@ public class ArrayMethods {
 		}
 		return ans;
 	}
+	public static int columnSum(int[][] ary, int x) {
+		int ans = 0;
+		for (int i = 0; i < ary.length; i++) {
+			if (x < ary[i].length) {
+				ans += ary[i][x];
+			}
+		}
+		return ans;
+	}
+	
