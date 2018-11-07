@@ -27,12 +27,12 @@ public class ArrayMethods {
 	public static int[] allColSums(int[][] ary) {
 		int longest = 0;
 		for (int i = 0; i < ary.length; i++) {
-			if (ary[i].length > ary[longest].length) {
+			if (ary[i].length >= ary[longest].length) {
 				longest = i;
 			}
 		}
-		int[] ans = new int[longest];
-		for (int i = 0; i < ary.length; i++) {
+		int[] ans = new int[ary[longest].length];
+		for (int i = 0; i < ans.length; i++) {
 			ans[i] = columnSum(ary, i);
 		}
 		return ans;
