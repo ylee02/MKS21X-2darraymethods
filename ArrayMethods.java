@@ -8,7 +8,7 @@ public class ArrayMethods {
 		}
 		return ans;
 	}
-	public static int columnSum(int[][] ary, int x) {
+	public static int[] columnSum(int[][] ary, int x) {
 		int ans = 0;
 		for (int i = 0; i < ary.length; i++) {
 			if (x < ary[i].length) {
@@ -17,7 +17,7 @@ public class ArrayMethods {
 		}
 		return ans;
 	}
-	public static int allRowSums(int[][] ary) {
+	public static int[] allRowSums(int[][] ary) {
 		int[] ans = new int [ary.length];
 		for (int i = 0; i < ary.length; i++) {
 			ans[i] = rowSum(ary, i);
