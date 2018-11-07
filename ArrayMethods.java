@@ -17,4 +17,30 @@ public class ArrayMethods {
 		}
 		return ans;
 	}
+	public static int allRowSums(int[][] ary) {
+		int[] ans = new int [ary.length];
+		for (int i = 0; i < ary.length; i++) {
+			ans[i] = rowSum(ary, i);
+		}
+		return ans;
+	}
+	public static int[] allColSums(int[][] ary) {
+	`	int longest = 0;
+		for (int i = 0; i < ary.length; i++) {
+			if (ary[i].length > ary[longest].length) {
+				longest = i;
+			}
+		}
+		int[] ans = new int[longest];
+		for (int i = 0; i < ary.length; i++) {
+			ans[i] = columnSum(ary, i);
+		}
+		return ans;
+	}
+	public static boolean isRowMagic(int[][] ary) {
+		if (ary.length == 0) {
+			return true;
+		}
+		
+		
 	
